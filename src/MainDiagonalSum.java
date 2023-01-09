@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class MainDiagonalSum
 {
-    public static void arrayInput(int[][] array, int row, int column)
+    public static void arrayInput(double[][] array, int row, int column)
     {
         Scanner input = new Scanner(System.in);
         for (int i = 0; i < row; i++)
@@ -10,12 +10,12 @@ public class MainDiagonalSum
             for (int j = 0; j < column;j++)
             {
                 System.out.print("array["+i+"]["+j+"] = ");
-                array[i][j] = input.nextInt();
+                array[i][j] = input.nextDouble();
             }
 
         }
     }
-    public static void arrayOutput(int[][] array, int row, int column)
+    public static void arrayOutput(double[][] array, int row, int column)
     {
         for (int i = 0; i < row; i++)
         {
@@ -27,9 +27,9 @@ public class MainDiagonalSum
         }
     }
 
-    public static int mainDiagonalSum(int[][] array, int row)
+    public static double mainDiagonalSum(double[][] array, int row)
     {
-        int sum = 0;
+        double sum = 0;
         for (int i = 0; i < row;i++)
         {
             sum += array[i][i];
@@ -45,12 +45,12 @@ public class MainDiagonalSum
         System.out.print("Nhập số cột: ");
         int column = input.nextInt();
 
-        int[][] array = new int[row][column];
+        double[][] array = new double[row][column];
         arrayInput(array, row,column);
         arrayOutput(array, row, column);
 
-        int mainDiagonalSum = mainDiagonalSum(array,row);
-        System.out.printf("Tổng đường chéo chính : %d", mainDiagonalSum);
+        double mainDiagonalSum = mainDiagonalSum(array,row);
+        System.out.printf("Tổng đường chéo chính : %f", mainDiagonalSum);
 
 
     }
