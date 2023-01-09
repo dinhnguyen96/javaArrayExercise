@@ -30,6 +30,7 @@ public class StudentSearch {
             if (studentArray[i].equalsIgnoreCase(studentSearch))
             {
                studentPosition = i;
+               break;
             }
         }
         return studentPosition;
