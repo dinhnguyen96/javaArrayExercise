@@ -21,7 +21,7 @@ public class MinElement {
     public static int minElementSearch(int[] array, int n)
     {
         int min = array[0];
-        for (int i = 1; i < array.length;i++)
+        for (int i = 1; i < n; i++)
         {
             if (array[i] < min)
             {
